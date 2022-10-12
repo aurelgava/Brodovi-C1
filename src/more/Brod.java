@@ -53,10 +53,10 @@ public class Brod {
         return mornari[0];
     }
 
-    public Mornar dohvMorn(int index) throws GIndeks {
+    public Mornar dohvMorn(int index){
         if(index<trenutniBroj){
             return mornari[index];
-        }else throw new GIndeks();
+        }else throw new GIndeks;
     }
 
     public Mornar dohvNajgoregMornara(){
@@ -80,6 +80,15 @@ public class Brod {
             mornari[trenutniBroj] = null;
         }
         trenutniBroj = 0;
+    }
+    protected int kvalitetBroda(){
+        int i=0;
+        int j=0;
+        int kvalitetBroda = 0;
+        while(i<trenutniBroj){
+            kvalitetBroda = mornari[j++].dohvKvalitet();
+            i++;
+        }
     }
 
 }
