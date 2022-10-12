@@ -9,7 +9,10 @@ public class GusarskiBrod extends Brod{
         super.vrsta = 'G';
 
     }
-    public void napadni(){
+    public void napadni(Brod ime){
+        Brod kvalitetBroda;
+        if (this.kvalitetBroda() > ime.kvalitetBroda()) {
 
+        }
     }
 }
