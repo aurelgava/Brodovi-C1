@@ -3,29 +3,21 @@ package more;
 public class Brod {
     protected String ime;
     protected int maxMornara;
-
     protected int trenutniBroj;
-
     protected Mornar[] mornari;
-
     protected char vrsta;
-
     public String getIme() {
         return ime;
     }
-
     public int getBrojMornara() {
         return maxMornara;
     }
-
     public void setIme(String ime) {
         this.ime = ime;
     }
-
     public void setBrojMornara(int brojMornara) {
         this.maxMornara = brojMornara;
     }
-
     public Brod(String ime, int maxMornara, Mornar m){
         this.ime = ime;
         this.maxMornara = maxMornara;
@@ -33,7 +25,6 @@ public class Brod {
         mornari[0] = m;
         trenutniBroj = 1;
     }
-
     public void dodajMornara(Mornar m){
         //trenutniBroj = trenutniBroj + 1;
 
@@ -67,5 +58,14 @@ public class Brod {
         return vrsta;
     }
 
+    protected int kvalitetBroda(){
+        int i=0;
+        int j=0;
+        int kvalitetBroda = 0;
+        while(i<trenutniBroj){
+            kvalitetBroda = mornari[j++].dohvKvalitet();
+            i++;
+        }
+    }
 
 }
