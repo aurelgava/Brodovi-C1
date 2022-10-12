@@ -1,12 +1,14 @@
 package more;
 
 public class Brod {
-    private String ime;
-    private int maxMornara;
+    protected String ime;
+    protected int maxMornara;
 
-    private int trenutniBroj;
+    protected int trenutniBroj;
 
-    private Mornar[] mornari;
+    protected Mornar[] mornari;
+
+    protected char vrsta;
 
     public String getIme() {
         return ime;
@@ -42,5 +44,28 @@ public class Brod {
             mornari[trenutniBroj++] = m;
         }
     }
+
+    public int dohvBr(){
+        return trenutniBroj;
+    }
+
+    public Mornar dohvatiKapetana(){
+        return mornari[0];
+    }
+
+    public Mornar dohvMorn(int index){
+        if(index<trenutniBroj){
+            return mornari[index];
+        }else throw new GIndeks;
+    }
+
+    public Mornar dohvNajgoregMornara(){
+        return mornari[trenutniBroj];
+    }
+
+    public char dohvVrsta(){
+        return vrsta;
+    }
+
 
 }
