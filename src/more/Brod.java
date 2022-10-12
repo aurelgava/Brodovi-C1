@@ -53,10 +53,10 @@ public class Brod {
         return mornari[0];
     }
 
-    public Mornar dohvMorn(int index){
+    public Mornar dohvMorn(int index) throws GIndeks{
         if(index<trenutniBroj){
             return mornari[index];
-        }else throw new GIndeks;
+        }else throw new GIndeks();
     }
 
     public Mornar dohvNajgoregMornara(){
@@ -69,10 +69,12 @@ public class Brod {
 
     public double dohvKvalitet(){
         int zbir = 0;
-        for(int i = 0; i<trenutniBroj; i++){
-            zbir += mornari[i].dohvKvalitet();
-        }
-        return (double)zbir/trenutniBroj;
+        if(trenutniBroj>0){
+            for(int i = 0; i<trenutniBroj; i++){
+                zbir += mornari[i].dohvKvalitet();
+            }
+            return (double)zbir/trenutniBroj;
+        }else return 0;
     }
 
     public void ukloniPosadu(){
@@ -80,15 +82,6 @@ public class Brod {
             mornari[trenutniBroj] = null;
         }
         trenutniBroj = 0;
-    }
-    protected int kvalitetBroda(){
-        int i=0;
-        int j=0;
-        int kvalitetBroda = 0;
-        while(i<trenutniBroj){
-            kvalitetBroda = mornari[j++].dohvKvalitet();
-            i++;
-        }
     }
 
 }
