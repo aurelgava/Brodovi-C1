@@ -10,7 +10,7 @@ public class KraljevskiBrod extends Brod {
 
     public void napadni(Brod ime) {
         Brod kvalitetBroda;
-        if (this.kvalitetBroda() > ime.kvalitetBroda()) {
+        if (super.dohvKvalitet() > ime.dohvKvalitet()) {
 
         }
     }

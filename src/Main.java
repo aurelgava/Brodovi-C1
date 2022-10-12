@@ -6,9 +6,9 @@ public class Main {
         GusarskiBrod g1 = new GusarskiBrod("Pearl", 5, m1);
         KraljevskiBrod k1 = new KraljevskiBrod("St. John", 2, m3);
         try {
-            g1.dodajMorn(m2);
-            g1.dodajMorn(new Mornar("E", 60));
-            k1.dodajMorn(m4);
+            g1.dodajMornara(m2);
+            g1.dodajMornara(new Mornar("E", 60));
+            k1.dodajMornara(m4);
             System.out.println("Broj mornara na gusarskom brodu: " + g1.dohvBr());
             System.out.println("Kapetan gusarskog broda: " + g1.dohvatiKapetana());
             try {
