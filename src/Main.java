@@ -23,13 +23,13 @@ public class Main {
             System.out.println(k1);
             Flota flota = new Flota("F");
             flota.dodaj(k1);
-            try {
-                flota.dodaj(g1); //neuspesno dodavanje gusarskog broda u flotu
-            } catch(GNeadekvatan e) {}
+            //try {
+                //flota.dodaj(g1); //neuspesno dodavanje gusarskog broda u flotu
+            //} catch(GNeadekvatan e) {}
             flota.dodaj(new KraljevskiBrod("Santa Maria", 3, new Mornar("F", 40)));
             System.out.println("*** Izgled flote ***");
             System.out.println(flota);
-            flota.dohvBrod(0).dodajMorn(new Mornar("G", 50));
+            flota.dohvBrod(0).dodajMornara(new Mornar("G", 50));
             System.out.println("*** Nakon obnove flote ***");
             System.out.println(flota);
         } catch (Exception e) {

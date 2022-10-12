@@ -83,5 +83,8 @@ public class Brod {
         }
         trenutniBroj = 0;
     }
+    public String toString(){
+        return vrsta + " - " + ime + " : " + dohvKvalitet();
 
+    }
 }
