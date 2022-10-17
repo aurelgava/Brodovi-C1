@@ -44,10 +44,13 @@ public class Brod {
         if(m.dohvKvalitet()>mornari[0].dohvKvalitet()) {
             mornari[trenutniBroj++] = mornari[0];
             mornari[0] = m;
-        }else{
+        }else {
             mornari[trenutniBroj++] = m;
+
         }
-    }
+
+        }
+
 
     public int dohvBr(){
         return trenutniBroj;
