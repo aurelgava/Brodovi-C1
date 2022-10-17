@@ -87,4 +87,6 @@ public class Brod {
         return vrsta + " - " + ime + " : " + dohvKvalitet();
 
     }
+
+
 }

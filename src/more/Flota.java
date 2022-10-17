@@ -70,7 +70,7 @@ public class Flota {
 
     @Override
     public String toString() {
-        return "Flota" + '(' + vrstaFlote + ')' + naziv + ':' + kvalitetFlote();
+        return "Flota" + '(' + this.vrstaFlote + ')' + this.naziv + ':' + this.kvalitetFlote();
     }
 
 }
