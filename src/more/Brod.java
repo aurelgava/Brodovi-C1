@@ -36,12 +36,14 @@ public class Brod {
 
     public void dodajMornara(Mornar m){
         //trenutniBroj = trenutniBroj + 1;
-
         if(m.dohvKvalitet()>mornari[0].dohvKvalitet()) {
             mornari[trenutniBroj++] = mornari[0];
             mornari[0] = m;
-        }else{
+        }else {
             mornari[trenutniBroj++] = m;
+
+        }
+
         }
     }
 
@@ -60,7 +62,7 @@ public class Brod {
     }
 
     public Mornar dohvNajgoregMornara(){
-        return mornari[trenutniBroj];
+        return mornari[trenutniBroj-1];
     }
 
     public char dohvVrsta(){
@@ -79,7 +81,7 @@ public class Brod {
 
     public void ukloniPosadu(){
         for(int i = 0; i<trenutniBroj; i++){
-            mornari[trenutniBroj] = null;
+            mornari[i] = null;
         }
         trenutniBroj = 0;
     }
