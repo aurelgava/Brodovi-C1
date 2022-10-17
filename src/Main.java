@@ -23,9 +23,9 @@ public class Main {
             System.out.println(k1);
             Flota flota = new Flota("F");
             flota.dodaj(k1);
-            //try {
-                //flota.dodaj(g1); //neuspesno dodavanje gusarskog broda u flotu
-            //} catch(GNeadekvatan e) {}
+            try {
+                flota.dodaj(g1); //neuspesno dodavanje gusarskog broda u flotu
+            } catch(GNeadekvatan e) {}
             flota.dodaj(new KraljevskiBrod("Santa Maria", 3, new Mornar("F", 40)));
             System.out.println("*** Izgled flote ***");
             System.out.println(flota);

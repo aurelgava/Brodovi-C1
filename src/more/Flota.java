@@ -68,9 +68,20 @@ public class Flota {
 
     }
 
+
+
+
+
     @Override
     public String toString() {
-        return "Flota" + '(' + this.vrstaFlote + ')' + this.naziv + ':' + this.kvalitetFlote();
+    String prikaz = "Flota" + '(' + vrstaFlote + ')' + naziv + ':' + kvalitetFlote() + '\n';
+    Element temp = lista;
+    while(temp != null){
+
+        prikaz += temp.b;
+        temp = temp.next;
+    }
+        return prikaz;
     }
 
 }
