@@ -45,11 +45,13 @@ public class Brod {
             mornari[trenutniBroj++] = mornari[0];
             mornari[0] = m;
         }else {
+            if(this.trenutniBroj==this.maxMornara)return;
+            else{
             mornari[trenutniBroj++] = m;
 
         }
 
-        }
+        }}
 
 
     public int dohvBr(){
@@ -67,7 +69,12 @@ public class Brod {
     }
 
     public Mornar dohvNajgoregMornara(){
-        return mornari[trenutniBroj-1];
+        Mornar min = new Mornar("a",0);
+        for(int i=0; i<this.trenutniBroj; i++){
+
+            if(mornari[i].dohvKvalitet()<min.dohvKvalitet()) min = mornari[i];
+        }
+        return min;
     }
 
     public char dohvVrsta(){

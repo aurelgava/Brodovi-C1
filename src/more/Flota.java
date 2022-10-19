@@ -78,7 +78,7 @@ public class Flota {
     Element temp = lista;
     while(temp != null){
 
-        prikaz += temp.b;
+        prikaz += temp.b + " ";
         temp = temp.next;
     }
         return prikaz;

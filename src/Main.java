@@ -17,7 +17,7 @@ public class Main {
             System.out.println("*** Ispis brodova ***");
             System.out.println(g1);
             System.out.println(k1);
-            g1.napadni(k1);
+            k1.napadni(g1);
             System.out.println("*** Ispis brodova nakon napada ***");
             System.out.println(g1);
             System.out.println(k1);
